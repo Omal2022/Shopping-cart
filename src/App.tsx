@@ -6,7 +6,7 @@ import { CartListPage } from "./pages/cartList/CartListPage"
 export const App = () => {
   return (
     <Routes>
-      <Route path="/product-list" element={<ProductList />} />
+      <Route path="/" element={<ProductList />} />
       <Route path="/cart" element={<CartListPage />} />
       <Route path="/product-details/:id" element={<ProductDetails />} />
     </Routes>

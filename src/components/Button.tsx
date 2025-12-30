@@ -8,19 +8,21 @@ export interface BtnStyle {
   txtColor?: string;
   width?: string;
   height?: string;
+  disabled?: boolean;
 }
 
 export const Button = ({
   bgColor,
   txtColor = "white",
-  width = "120px",
+  width = "full",
   height = "40px",
   children,
   onClick,
   clsName,
+  disabled,
 }: BtnStyle) => {
   const styles: React.CSSProperties = {
-    backgroundColor:bgColor || "black" ,
+    backgroundColor: bgColor || "black",
     color: txtColor,
     width,
     height,
@@ -29,6 +31,7 @@ export const Button = ({
   return (
     <button
       type="button"
+      disabled={disabled}
       style={styles}
       onClick={onClick}
       className={clsName}
